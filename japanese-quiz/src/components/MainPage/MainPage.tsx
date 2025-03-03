@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./MainPage.css";
 import QuizModal from "../QuizModal/QuizModal";
+import backgroundImage from "../../img/jap1.jpg";
 
 const MainPage: React.FC = () => {
   const [quizStarted, setQuizStarted] = useState(false);
@@ -11,7 +12,12 @@ const MainPage: React.FC = () => {
   };
 
   return (
-    <div className="main-page">
+    <div
+      className="main-page"
+      style={{
+        backgroundImage: `url(${backgroundImage})`,
+      }}
+    >
       <h2>Benvenuto nel quiz degli alfabeti giapponesi!</h2>
       <div className="alphabet-selection">
         <button

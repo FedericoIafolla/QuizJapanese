@@ -14,33 +14,26 @@ const Navbar: React.FC = () => {
   };
 
   useEffect(() => {
-    if (isOpen) {
-      setTimeout(() => {
-        setOverlayActive(true);
-      }, 300);
-    } else {
-      setOverlayActive(false);
-    }
+    setOverlayActive(isOpen);
   }, [isOpen]);
 
   return (
     <>
       <nav className="navbar">
-        <button
-          className="hamburger"
-          onClick={toggleSidebar}
-          ref={hamburgerRef}
-        >
-          &#9776;
-        </button>
-        <h1>Japanese Quiz!</h1>
+        {!isOpen && (
+          <button
+            className="hamburger"
+            onClick={toggleSidebar}
+            ref={hamburgerRef}
+          >
+            &#9776;
+          </button>
+        )}
       </nav>
-
       <div
         className={`overlay ${overlayActive ? "active" : ""}`}
         ref={overlayRef}
       ></div>
-
       <div className={`sidebar ${isOpen ? "open" : ""}`} ref={sidebarRef}>
         <button className="close-btn" onClick={toggleSidebar}>
           &times;

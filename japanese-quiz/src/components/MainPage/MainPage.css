@@ -37,6 +37,7 @@
 
 @media only screen and (max-width: 768px) {
   .main-page {
+    background-image: url("../../img/jap2.jpg"); /* Cambia l'immagine a jap2.jpg sotto i 480px */
     background-size: cover;
     background-position: center;
   }

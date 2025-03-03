@@ -12,12 +12,7 @@ const MainPage: React.FC = () => {
   };
 
   return (
-    <div
-      className="main-page"
-      style={{
-        backgroundImage: `url(${backgroundImage})`,
-      }}
-    >
+    <div className="main-page">
       <h2>Benvenuto nel quiz degli alfabeti giapponesi!</h2>
       <div className="alphabet-selection">
         <button

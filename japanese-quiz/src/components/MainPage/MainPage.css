@@ -9,6 +9,7 @@
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  background-image: url("../../img/jap1.jpg"); /* Default background */
 }
 
 .start-quiz-btn {
@@ -51,6 +52,7 @@
 
 @media only screen and (max-width: 480px) {
   .main-page {
+    background-image: url("../../img/jap2.jpg"); /* Cambia l'immagine a jap2.jpg sotto i 480px */
     background-size: cover;
     background-position: center;
   }

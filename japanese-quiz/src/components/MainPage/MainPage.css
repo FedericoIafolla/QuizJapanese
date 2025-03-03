@@ -1,0 +1,26 @@
+.main-page {
+  padding: 2rem;
+  text-align: center;
+}
+
+.start-quiz-btn {
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.alphabet-selection {
+  margin: 1rem 0;
+}
+
+.alphabet-selection button {
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.alphabet-selection button.selected {
+  background-color: #333;
+  color: #fff;
+}

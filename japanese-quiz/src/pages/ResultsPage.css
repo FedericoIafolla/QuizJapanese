@@ -1,0 +1,24 @@
+.results-page {
+  padding: 2rem;
+  text-align: center;
+}
+
+.results-table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+.results-table th,
+.results-table td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+}
+
+.correct {
+  background-color: #71c974; /* verde */
+}
+
+.incorrect {
+  background-color: #bc666e; /* rosso */
+}

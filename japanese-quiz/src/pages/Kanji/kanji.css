@@ -1,0 +1,70 @@
+.kanji-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.kanji-title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.kanji-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.carousel-button {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 2rem 0;
+  width: 10rem;
+}
+
+.carousel-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.group {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.symbol {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.kanji-info {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.info-title {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.info-text {
+  margin-bottom: 15px;
+}

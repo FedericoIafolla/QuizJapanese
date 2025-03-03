@@ -1,0 +1,116 @@
+.quiz-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1rem;
+}
+
+.quiz-modal {
+  background-color: #fff;
+  width: 80%;
+  max-width: 800px;
+  padding: 1.2rem 1rem 3rem;
+  border-radius: 8px;
+  position: relative;
+  min-height: 5rem;
+}
+
+.quiz-modal::before {
+  content: "";
+  position: absolute;
+  top: 5%;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1.5px;
+  background-color: #ddd;
+  z-index: 1;
+}
+
+.quiz-content {
+  display: flex;
+  position: relative;
+  z-index: 2;
+}
+
+.quiz-left {
+  width: 50%;
+  padding-right: 1rem;
+}
+
+.quiz-left h2 {
+  margin-bottom: 1rem;
+}
+
+.symbol {
+  font-size: 5rem;
+  text-align: center;
+}
+
+.quiz-right {
+  width: 50%;
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.option {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.option.selected {
+  background-color: #e0e0e0;
+}
+
+.next-button {
+  position: absolute;
+  bottom: -2.3rem;
+  right: 0rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  border-radius: 25px;
+}
+
+.quiz-completed {
+  text-align: center;
+}
+
+.results-button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.quiz-modal.no-divider::before {
+  display: none;
+}
+
+.restart-btn {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 1.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  z-index: 10;
+}
+
+.restart-btn:hover {
+  color: rgb(120, 111, 111);
+}

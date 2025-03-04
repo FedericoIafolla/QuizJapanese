@@ -38,18 +38,8 @@ const MainPage: React.FC = () => {
   ];
 
   return (
-<<<<<<< Updated upstream
-    <div
-      className="main-page"
-      style={{
-        backgroundImage: `url(${backgroundImage})`,
-      }}
-    >
-      <h2>Benvenuto nel quiz degli alfabeti giapponesi!</h2>
-=======
     <div className="main-page">
       <h1>Benvenuto nel quiz degli alfabeti giapponesi!</h1>
->>>>>>> Stashed changes
       <div className="alphabet-selection">
         <button
           className={selectedAlphabet === "hiragana" ? "selected" : ""}
@@ -89,7 +79,6 @@ const MainPage: React.FC = () => {
         >
           Difficile
         </button>
-        {/* Container sempre renderizzato per i gruppi (se l'alfabeto è Hiragana o Katakana) */}
         {(selectedAlphabet === "hiragana" ||
           selectedAlphabet === "katakana") && (
           <div className="group-container">

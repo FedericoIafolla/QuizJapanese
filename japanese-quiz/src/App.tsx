@@ -6,6 +6,7 @@ import ResultsPage from "./pages/ResultsPage";
 import Hiragana from "./pages/Hiragana/hiragana";
 import Katakana from "./pages/Katakana/katakana";
 import Kanji from "./pages/Kanji/kanji";
+import "./App.css";
 
 const App: React.FC = () => {
   return (

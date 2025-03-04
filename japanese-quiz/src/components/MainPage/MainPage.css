@@ -35,7 +35,6 @@
   color: #fff;
 }
 
-/* Bottoni di difficoltà e gruppi (leggermente più piccoli) */
 .difficulty-selection button,
 .group-selection button {
   margin: 0 0.3rem;
@@ -51,12 +50,10 @@
   color: #fff;
 }
 
-/* Container sempre presente per i gruppi con altezza fissa */
 .group-container {
-  height: 40px; /* Fissa l'altezza per evitare spostamenti */
+  height: 40px;
 }
 
-/* Gestione visibilità bottoni gruppi */
 .group-selection.active {
   opacity: 1;
   pointer-events: auto;
@@ -69,13 +66,11 @@
   transition: opacity 0.3s;
 }
 
-/* Margini per la sezione difficoltà */
 .difficulty-selection {
   margin-top: 20px;
   margin-bottom: 10px;
 }
 
-/* Media queries per adattabilità su dispositivi piccoli */
 @media only screen and (max-width: 768px) {
   .main-page {
     background-image: url("../../img/jap2.jpg");

@@ -9,6 +9,7 @@
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  background-image: url("../../img/jap1.jpg");
 }
 
 .start-quiz-btn {
@@ -77,10 +78,7 @@
 /* Media queries per adattabilità su dispositivi piccoli */
 @media only screen and (max-width: 768px) {
   .main-page {
-<<<<<<< Updated upstream
-=======
     background-image: url("../../img/jap2.jpg");
->>>>>>> Stashed changes
     background-size: cover;
     background-position: center;
   }
@@ -101,10 +99,7 @@
 
 @media only screen and (max-width: 480px) {
   .main-page {
-<<<<<<< Updated upstream
-=======
     background-image: url("../../img/jap2.jpg");
->>>>>>> Stashed changes
     background-size: cover;
     background-position: center;
   }

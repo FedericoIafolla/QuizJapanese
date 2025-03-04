@@ -5,6 +5,15 @@ body {
 .hiragana-container {
   padding: 20px;
   text-align: center;
+  min-height: 95.6vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../../img/jap3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .hiragana-title {
@@ -17,7 +26,7 @@ body {
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
-  background-color: #ffffff;
+  background-color: #ffffff30;
   padding: 20px;
   border-radius: 8px;
 }

@@ -10,6 +10,8 @@ import {
 
 interface QuizModalProps {
   alphabet: string;
+  difficulty: string;
+  group?: string;
 }
 
 interface UserAnswer {
@@ -20,7 +22,11 @@ interface UserAnswer {
 
 const shuffleArray = (array: any[]) => array.sort(() => Math.random() - 0.5);
 
-const QuizModal: React.FC<QuizModalProps> = ({ alphabet }) => {
+const QuizModal: React.FC<QuizModalProps> = ({
+  alphabet,
+  difficulty,
+  group,
+}) => {
   const navigate = useNavigate();
   const [questions, setQuestions] = useState<Question[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -38,8 +44,28 @@ const QuizModal: React.FC<QuizModalProps> = ({ alphabet }) => {
     } else if (alphabet === "kanji") {
       selectedQuestions = kanjiQuestions;
     }
-    setQuestions(shuffleArray([...selectedQuestions]));
-  }, [alphabet]);
+
+    if (alphabet === "hiragana" || alphabet === "katakana") {
+      if (difficulty === "medio") {
+        const half = Math.floor(selectedQuestions.length / 2);
+        selectedQuestions = shuffleArray([...selectedQuestions]).slice(0, half);
+      } else if (difficulty === "facile" && group) {
+        selectedQuestions = selectedQuestions.filter((q) => q.group === group);
+      }
+
+      selectedQuestions = shuffleArray([...selectedQuestions]);
+    } else if (alphabet === "kanji") {
+      selectedQuestions = shuffleArray([...selectedQuestions]);
+      if (difficulty === "facile") {
+        selectedQuestions = selectedQuestions.slice(0, 10);
+      } else if (difficulty === "medio") {
+        selectedQuestions = selectedQuestions.slice(0, 25);
+      }
+    }
+
+    setQuestions(selectedQuestions);
+    setCurrentQuestionIndex(0);
+  }, [alphabet, difficulty, group]);
 
   useEffect(() => {
     if (questions.length > 0 && currentQuestionIndex < questions.length) {

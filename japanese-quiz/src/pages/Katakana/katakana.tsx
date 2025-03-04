@@ -76,10 +76,10 @@ const Katakana: React.FC = () => {
   };
 
   return (
-    <div className="hiragana-container">
-      <h1 className="hiragana-title">Impara il Katakana</h1>
+    <div className="katakana-container">
+      <h1 className="katakana-title">Impara il Katakana</h1>
 
-      <div className="hiragana-carousel">
+      <div className="katakana-carousel">
         <button onClick={goToPreviousGroup} className="carousel-button">
           &#10094;
         </button>

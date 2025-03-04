@@ -13,6 +13,7 @@ const MainPage: React.FC = () => {
     setSelectedAlphabet(alphabet);
     if (alphabet === "kanji") {
       setSelectedDifficulty("difficile");
+      setSelectedGroup("vocali");
     } else {
       setSelectedDifficulty("difficile");
       setSelectedGroup("vocali");
@@ -79,27 +80,31 @@ const MainPage: React.FC = () => {
         >
           Difficile
         </button>
-        {(selectedAlphabet === "hiragana" ||
-          selectedAlphabet === "katakana") && (
-          <div className="group-container">
-            <div
-              className={`group-selection ${
-                selectedDifficulty === "facile" ? "active" : "inactive"
-              }`}
-              style={{ marginTop: "10px" }}
-            >
-              {groups.map((group) => (
-                <button
-                  key={group}
-                  className={selectedGroup === group ? "selected" : ""}
-                  onClick={() => setSelectedGroup(group)}
-                >
-                  {group.toUpperCase()}
-                </button>
-              ))}
-            </div>
+
+        {/* Mostra i gruppi solo se l'alfabeto non è Kanji */}
+        <div
+          className={`group-container ${
+            selectedAlphabet === "kanji" ? "hidden" : ""
+          }`}
+          style={{ marginTop: "10px" }}
+        >
+          <div
+            className={`group-selection ${
+              selectedDifficulty === "facile" ? "active" : "inactive"
+            }`}
+          >
+            {groups.map((group) => (
+              <button
+                key={group}
+                className={selectedGroup === group ? "selected" : ""}
+                onClick={() => setSelectedGroup(group)}
+                disabled={selectedAlphabet === "kanji"}
+              >
+                {group.toUpperCase()}
+              </button>
+            ))}
           </div>
-        )}
+        </div>
       </div>
       <div style={{ marginTop: "20px" }}>
         <button className="start-quiz-btn" onClick={startQuiz}>
